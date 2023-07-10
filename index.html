@@ -31,7 +31,11 @@
                     gps-entity-place="latitude: 35.664747076636395; longitude: -220.2450827881694;"
                 ></a-entity>
 
-            <a-camera gps-camera rotation-reader></a-camera>
+            <a-camera
+              gps-camera
+              arjs-look-controls='smoothingFactor: 0.1'
+              rotation-reader>
+            </a-camera>
         </a-scene>
     </body>
 </html>
