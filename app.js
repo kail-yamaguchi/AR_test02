@@ -10,8 +10,11 @@ const staticLoadPlaces = () => [
 ];
 */
 
-const createPlaces = 9{ latitude, longitude }) => [
-  ['p1', -2,, -2]
+const createPlaces = { latitude, longitude }) => [
+  ['p1', -2, -2],
+  ['p2', -2, 2],
+  ['p3', 2, -2],
+  ['p4', 2, 2],
 ].map(([label, cy, cx]) => ({
   label,
   location: {
