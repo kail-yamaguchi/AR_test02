@@ -1,3 +1,4 @@
+/*
 const staticLoadPlaces = () => [
   {
     label: 'p1',
@@ -7,11 +8,22 @@ const staticLoadPlaces = () => [
     },
   },
 ];
+*/
+
+const createPlaces = 9{ latitude, longitude }) => [
+  ['p1', -2,, -2]
+].map(([label, cy, cx]) => ({
+  label,
+  location: {
+    latitude : latitude  + 0.000009 * cy,
+    longitude: longitude + 0.000011 * cx,
+  },
+}));
 
 const models = [
   {
     url: '#animated-asset',
-    scale: ['0.5', '0.5', '0.5'],
+    scale: ['1.0', '1.0', '1.0'],
   },
 ];
 
@@ -35,9 +47,7 @@ const createEntity = ({ location: { latitude, longitude }, model, scale: [x, y, 
 const renderPlace = ({ location }) => {
   const $scene = document.querySelector('a-scene');
   const { url, scale} = models[0];
-  const $entity = createEntity({
-    location,
-    model: url, scale });
+  const $entity = createEntity({ location, model: url, scale });
   $scene.appendChild($entity);
 };
 
