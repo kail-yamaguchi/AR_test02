@@ -10,7 +10,7 @@ const staticLoadPlaces = () => [
 ];
 */
 
-const createPlaces = { latitude, longitude }) => [
+const createPlaces = ({ latitude, longitude }) => [
   ['p1', -2, -2],
   ['p2', -2, 2],
   ['p3', 2, -2],
